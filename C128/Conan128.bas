@@ -1,4 +1,4 @@
-1 poke45,peek(174):poke46,peek(175):clr:printchr$(14):printchr$(8):print"{clear}{white}":poke53280,6:dimos$(120):tk=1:bt=0:goto100
+1 clr:printchr$(14):printchr$(8):print"{clear}{white}":poke53280,6:poke53281,6:poke2594,0:dimos$(120):tk=1:bt=0:goto100
 20 print"{down}{reverse on}Per tirare premi un tasto{reverse off}"
 30 getp$:ifp$=""then30
 40 d6=int(21*rnd(0))+1:printtab(26)"{up}Hai fatto {reverse on}"d6"{left}{reverse off}":return
@@ -10,8 +10,8 @@
 150 gosub61000:print"{up}{up}{up}":gosub60000:x1=0:print"{clear}":printtab(16)"{yellow}{down}{down}INDICE{down}{down}":gosub61130:forp=1to10:print"{up}";:next:x1=32:gosub61130:x1=0:forp=1to8:print"{up}";:next:printtab(7)"{white}1  Istruzioni":printtab(7)"{down}{down}{down}{down}2  Inizio dell' Avventura {reverse off}"
 176 gosub10500:ifn>2thenprint"{up}{up}":goto176
 177 onngoto210,400
-210 print"{clear}Stai iniziando una avventura ispirata ad":print"{up}una storia dell'eroico CONAN.     ":print"Puoi scegliere il personaggio tra quelli":print"{up}proposti o farlo creare al computer in"
-242 print"maniera casuale.":print"{down}Le caratteristiche sono 6 :":print"Forza(Fo),Intelligenza(In),Destrezza(De)":print"{up}Fortuna(Fr),Robustezza(Ro),Fascino(Fa);":print"le caratteristiche hanno un valore,dato"
+210 print"{clear}Stai iniziando una avventura ispirata ad":print"una storia dell'eroico CONAN.     ":print"Puoi scegliere il personaggio tra quelli":print"proposti o farlo creare al computer in"
+242 print"maniera casuale.":print"{down}Le caratteristiche sono 6 :":print"Forza(Fo),Intelligenza(In),Destrezza(De)":print"Fortuna(Fr),Robustezza(Ro),Fascino(Fa);":print"le caratteristiche hanno un valore,dato"
 290 print"da 6 + due dadi a 6 (minimo 8 max 18).":print"{down}L' abilita' nell' uso delle armi  e'":print"data dalla propria forza x 5 ;cosi' un":print"personaggio con forza 10 usa le armi al"
 330 print"{reverse on}50 %{reverse off} ,avra' il 50 % di probabilita' di":print"colpire il nemico o parare i suoi colpi.":print"Le altre caratteristiche serviranno in":print"varie occasioni e verranno specificate"
 370 print"mano a mano che dovrai usarle .":gosub60000:print"{down}{clear}Quando sarai cresciuto nelle tue":print"{down}caratteristiche sino a  20 , e nella":print"{down}capacita' di combattimento oltre il ":print"{down}200 % , diventerai un Eroe Divino !"
@@ -58,8 +58,8 @@
 1335 k0=ka+kt+kf+ks:ifk0=0thenprint"{down}Nessuno{up}"
 1336 ka=0:kt=0:kf=0:k0=0:print:gosub60000:ifee=6andat>200then9000
 1340 ee=0:ifsu=1thenreturn
-1350 print"{clear}{yellow}"tk"'  Settimana d' avventura{white}":printnp$",sei nella taverna dello Zoppo":print"dove si trovano avventurieri e mercenari":print"{up}e ascolti i loro discorsi.":gosub70
-1390 print"{down}{down}{down}{down}{down}":gosub61010:print"{up}{yellow} {reverse on}Ti si offrono varie avventure e puoi  ":print" {reverse on}         sceglierne una .             {reverse off}{up}":gosub60000:print"{clear}":gosub900:la$=ss$:gosub900:lb$=ss$:ifleft$(la$,1)="L"thena9=2500:goto1479
+1350 print"{clear}{yellow}"tk"'  Settimana d' avventura{white}":printnp$",sei nella taverna dello Zoppo":print"dove si trovano avventurieri e mercenari":print"e ascolti i loro discorsi.":gosub70
+1390 print"{down}{down}{down}{down}{down}":gosub61010:print"{yellow} {reverse on}Ti si offrono varie avventure e puoi  ":print" {reverse on}         sceglierne una .             {reverse off}{up}":gosub60000:print"{clear}":gosub900:la$=ss$:gosub900:lb$=ss$:ifleft$(la$,1)="L"thena9=2500:goto1479
 1471 ifleft$(la$,1)="V"thena9=4000:goto1479
 1472 ifleft$(la$,1)="D"thena9=1000:goto1479
 1473 a9=500
@@ -75,7 +75,7 @@
 1930 onngoto2000,4000,3000,5000,1950
 1950 ifdn>=100then1980
 1960 print"{clear}"np$",lo Zoppo non fa credito !":print"E' meglio che ti guadagni del denaro !":gosub60:goto1390
-1980 dn=dn-100:rf=rf+1:print"{clear}E'passata una settimana e hai recuperato":print"{up}un punto di robustezza;sei ora a Ro"rf:tk=tk+1:gosub60:print"Possiedi {92}"dn:gosub60:goto1390
+1980 dn=dn-100:rf=rf+1:print"{clear}E'passata una settimana e hai recuperato":print"un punto di robustezza;sei ora a Ro"rf:tk=tk+1:gosub60:print"Possiedi {92}"dn:gosub60:goto1390
 2000 tk=tk+1:print"{clear}Stai dirigendoti verso":print"{down}"lb$:fu=0:im$="":nm$="":gosub20000:ifi<=3then2100
 2050 fu=0:bt=0:gosub30000
 2100 print"{down}Sei arrivato senza altri incontri":print"presso "lb$:print"dove si erge una torre spaventosa !{down}{down}":x1=16:gosub61130:gosub700:gosub810:print"{clear}Il "la$:print"sbuca da dietro la Torre    !":gosub60:print"{down}Ti rendi conto che si tratta di uno"
@@ -477,7 +477,7 @@
 41080 np$="Vokhor":goto41100
 41090 np$="Zolak":goto41100
 41100 return
-50000 qq=0:print"{down}Stai vagando nel Deserto,senza guida":tt=tt+1:print"{down}se entro una settimana non trovi":print"{down}un' oasi sei morto !":gosub60:print"{down}Per trovare un' oasi devi tirare un dado":print"{up}a 21 e il risultato deve essere uguale"
+50000 qq=0:print"{down}Stai vagando nel Deserto,senza guida":tt=tt+1:print"{down}se entro una settimana non trovi":print"{down}un' oasi sei morto !":gosub60:print"{down}Per trovare un' oasi devi tirare un dado":print"a 21 e il risultato deve essere uguale"
 50060 print"o inferiore alla tua Fortuna ("fr") .":gosub20:gosub60:iffr>=d6then50500
 50120 print"{down}Sei morto sperduto nel deserto !":goto9900
 50500 print"{down}Hai trovato l' oasi !":gosub60000:print"{clear}Nell'oasi trovi una carovana di nomadi":print"{down}che si stanno dirigendo verso la tua":print"{down}citta' e ti prendono con loro ;{down}":gosub60:q0=int(2*rnd(0))+2
