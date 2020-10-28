@@ -7,7 +7,7 @@
 80print"{down}I Lupi Mannari si uccidono solo con la":print"Spada fatata":return
 100print"{clear}{yellow}"tab(10)"La Systems Editoriale":printtab(11)"{down}     presenta     {down}{down}":a$="{reverse on}CONAN"
 105print"{up}"tab(17)a$:forkh=0to2000:next
-150gosub61000:print"{up}{up}{up}":gosub60000:x1=0:print"{clear}":printtab(16)"{yellow}{down}{down}INDICE{down}{down}":gosub61130:forp=1to10:print"{up}";:next:x1=32:gosub61130:x1=0:forp=1to8:print"{up}";:next:printtab(7)"{white}1  Istruzioni":printtab(7)"{down}{down}{down}{down}2  Inizio dell'Avventura {reverse off}"
+150print"{up}{up}{up}":gosub60000:x1=0:print"{clear}":printtab(16)"{yellow}{down}{down}INDICE{down}{down}":forp=1to10:print"{up}";:next:x1=32:x1=0:forp=1to8:print"{up}";:next:printtab(7)"{white}1  Istruzioni":printtab(7)"{down}{down}{down}{down}2  Inizio dell'Avventura {reverse off}"
 176gosub10500:ifn>2thenprint"{up}{up}":goto176
 177onngoto210,400
 210:
@@ -54,12 +54,12 @@
 1336ka=0:kt=0:kf=0:k0=0:print:gosub60000:ifee=6andat>200then9000
 1340ee=0:ifsu=1thenreturn
 1350print"{clear}{yellow}"tk"'  Settimana d'avventura{white}":printnp$",sei nella taverna dello Zoppo":print"dove si trovano avventurieri e mercenari":print"{up}e ascolti i loro discorsi.":gosub70
-1390print"{down}{down}{down}{down}{down}":gosub61010:print"{up}{yellow} {reverse on}Ti si offrono varie avventure e puoi  ":print" {reverse on}         sceglierne una .             {reverse off}{up}":gosub60000:print"{clear}":gosub900:la$=ss$:gosub900:lb$=ss$:ifleft$(la$,1)="L"thena9=2500:goto1479
+1390print"{down}{down}{down}{down}{down}":print"{up}{yellow} {reverse on}Ti si offrono varie avventure":gosub60000:print"{clear}":gosub900:la$=ss$:gosub900:lb$=ss$:ifleft$(la$,1)="L"thena9=2500:goto1479
 1471ifleft$(la$,1)="V"thena9=4000:goto1479
 1472ifleft$(la$,1)="D"thena9=1000:goto1479
 1473a9=500
 1479print"{clear}{up}{reverse on}* 1 *{reverse off} Un "la$" che":print"vive presso "lb$:print"terrorizza gli abitanti della regione ;":print"taglia di {reverse on}{yellow}{92}"a9"{left}{white}{reverse off} a chi lo uccidera'.":gosub60:gosub1600:print"{down}{reverse on}* 3 *{reverse off} Sta' per partire la Carovana"
-1510print"che tutti i mesi si reca nella stupenda":print"citta' di Marrakesch ,dove vengono fab-":print"bricate armi e oggetti magici!":gosub60:goto1710
+1510print"che tutti i mesi si reca nella stupenda":print"citta' di Marrakesch ,dove vengono fab-":print"bricate armi e oggetti magici":gosub60:goto1710
 1600gosub900:za$=ss$:gosub900:zb$=ss$:gosub900:zc$=ss$:gosub900:zd$=ss$:ifleft$(zb$,2)=" F"orleft$(zb$,2)=" M"thenza$="Hanno rapito "
 1620ifleft$(zb$,2)=" D"thenza$="E'fuggita "
 1650print"{down}{reverse on}* 2 *{reverse off}{right}"za$;"la"zb$:print"di un "zc$" e si offre":print"una ricompensa:{yellow}"zd$:print"{white}a chi la riportera'.":zk=0:gosub60:restore:return
@@ -70,20 +70,20 @@
 1930onngoto2000,4000,3000,5000,1950
 1950ifdn>=100then1980
 1960print"{clear}"np$",lo Zoppo non fa credito!":print"Guadagnati del denaro!":gosub60:goto1390
-1980dn=dn-100:rf=rf+1:print"{clear}E'passata una settimana e hai recuperato":print"{up}un punto di robustezza;sei ora a Ro"rf:tk=tk+1:gosub60:print"Possiedi {92}"dn:gosub60:goto1390
+1980dn=dn-100:rf=rf+1:print"{clear}E' passata una settimana e hai recuperato":print"{up}un punto di robustezza;sei ora a Ro"rf:tk=tk+1:gosub60:print"Possiedi {92}"dn:gosub60:goto1390
 2000tk=tk+1:print"{clear}Stai dirigendoti verso":print"{down}"lb$:fu=0:im$="":nm$="":gosub20000:ifi<=3then2100
 2050fu=0:bt=0:gosub30000
-2100print"{down}Sei arrivato senza altri incontri":print"presso "lb$:print"dove si erge una torre spaventosa!{down}{down}":x1=16:gosub61130:gosub700:gosub810:print"{clear}Il "la$:print"sbuca da dietro la Torre!":gosub60:print"{down}Ti rendi conto che si tratta di uno"
+2100print"{down}Sei arrivato senza altri incontri":print"presso "lb$:print"dove si erge una torre spaventosa!{down}{down}":x1=16:gosub700:gosub810:print"{clear}Il "la$:print"sbuca da dietro la Torre!":gosub60:print"{down}Ti rendi conto che si tratta di uno"
 2150print"scontro mortale .":gosub60:print"{down}Puoi:":print"{down}{reverse on}* 1 *{reverse off} rinunciare e fuggire":print"{down}{reverse on}* 2 *{reverse off} accettare il combattimento{down}"
 2190gosub10500:ifn>2thenprint"{up}{up}":goto2190
 2210onngoto2220,2300
-2220print"{clear}Con questa fuga ti sei coperto di":print"{down}ignominia!":gosub60:print"{down}Sei tornato in citta' dove la notizia":print"si e' gia' sparsa.":gosub60
+2220print"{clear}Ti sei coperto di ignominia!":gosub60:print"{down}Sei tornato in citta' dove la notizia":print"si e' gia' sparsa.":gosub60
 2250print"{down}Perdi un punto di fascino!":fa=fa-1:gosub800:goto1200
 2300gosub35000:print"{clear}Sei ritornato in citta' con i resti ":print"{down}del "la$" .":gosub60:print"{down}Incassi il premio di {92}"a9" e la tua":print"{down}fama di guerriero cresce:":iffa>19then2360
 2350print"{down}{down}Il tuo fascino e' cresciuto di uno":fa=fa+1
 2360dn=dn+a9:print"{down}Possiedi ora {92} "dn"{down}":gosub800:goto1200
 3000print"{clear}Sei al caravanserraglio e ti informi":qr=0:qw=0:print"{down}sulla Carovana per Marrakesch.":print"{down}Il biglietto per il viaggio , che dura":print"{down}un mese , e' di {92} 1000 andata e ritorno"
-3006la$="":print"{down}ma il capocarovaniere cerca anche un":print"{down}mercenario per la scorta della carovana":print"{down}Puoi :":print"{down}{reverse on}* 1 *{reverse off} rinunciare al viaggio":print"{down}{reverse on}* 2 *{reverse off} pagare i {92} 1000":print"{down}{reverse on}* 3 *{reverse off} arruolarti come scorta"
+3006la$="":print"{down}ma il capocarovaniere cerca anche un":print"{down}mercenario per la scorta":print"{down}Puoi :":print"{down}{reverse on}* 1 *{reverse off} rinunciare al viaggio":print"{down}{reverse on}* 2 *{reverse off} pagare i {92} 1000":print"{down}{reverse on}* 3 *{reverse off} arruolarti come scorta"
 3110gosub10500:ifn>3thenprint"{up}{up}":goto3110
 3130onngoto1200,3140,3230
 3140ifdn>=1000then3210
@@ -92,23 +92,23 @@
 3230print"{clear}Sei arruolato come mercenario di scorta":gosub60
 3240forq1=1to4:tk=tk+1:q2=int(3*rnd(0))+1:onq2goto3270,3300,3400
 3270print"{down}Questa settimana sei di retroguardia":gosub60:nm$="":im$="":gosub20000:im$="":ifi>4thengosub30000
-3291ifi=4thenprint"{down}{down}Nessun incontro questa settimana .":gosub60
+3291ifi=4thenprint"{down}{down}Nessun incontro questa settimana.":gosub60
 3292fu=0:goto3470
-3300print"{down}Questa settimana stai a fianco del":print"Capocarovana .":gosub60:q3=int(3*rnd(0))+1:onq3goto3330,3340,3370
+3300print"{down}Questa settimana stai a fianco del":print"Capocarovana.":gosub60:q3=int(3*rnd(0))+1:onq3goto3330,3340,3370
 3330print"{down}Il viaggio procede tranquillo per tutta":print"la settimana,nessun incontro pericoloso.":gosub60:goto3470
-3340print"{down}Un gruppo di briganti si sta' dirigendo":print"verso la carovana .":q4=int(2*rnd(0))+1:onq4goto3344,3350
+3340print"{down}Un gruppo di briganti si dirige":print"verso la carovana .":q4=int(2*rnd(0))+1:onq4goto3344,3350
 3344print"{down}Vieni mandato ad intercettarli":gosub60:nm=int(2*rnd(0))+3:nm$="":im$="":print"{down}Ti accorgi che i briganti sono "nm:gosub60000:print"{clear}":gosub21000:iffu=1thenprint"{clear}Con questa fuga ti sei coperto di "
-3348iffu=1thenprint"{down}disonore,perdi un punto di fascino     ":fa=fa-1
+3348iffu=1thenprint"{down}disonore,perdi un punto di fascino":fa=fa-1
 3349goto3470
-3350print"{down}Il Capo dei briganti lancia una sfida:":print"lui contro il campione della carovana":print"in un combattimento all'ultimo sangue .":gosub60:print"{down}Come mercenario sei designato quale "
+3350print"{down}Il Capo dei briganti lancia una sfida:":print"lui contro il campione della carovana":print"in un combattimento all'ultimo sangue.":gosub60:print"{down}Come mercenario sei designato quale "
 3358print"Campione della carovana!":gosub60000:gosub35000:print"{down}Con questo combattimento la tua fama":print"{down}di guerriero aumenta!":iffa>19thenfa=20:goto3470
 3366print"{down}Sei cresciuto di un punto di Fascino .":fa=fa+1:goto3470
 3370gosub11000:print"{down}Un gruppo di"nm" passeggeri della caro-":print"vana si rivelano Predoni travestiti e,":print"furtivi,tentano di ucciderti  per poter":print"predare la carovana con tranquillita'."
 3375gosub60:print"{down}Per accorgerti dell'inganno devi tirare":print"un dado a 21 e il risultato deve essere":print"uguale o inferiore alla tua ":print"Intelligenza ("in") .":gosub20:gosub60:ifin>=d6then3392
 3389print"{down}Non te ne sei accorto,ricevi "nm" ferite":rf=rf-nm:goto3394
-3392print"{down}Te ne sei accorto ed entri in mischia ":print"{down}con i "nm" Predoni!"
+3392print"{down}Te ne sei accorto ed entri in mischia":print"{down}con i "nm" Predoni!"
 3394gosub60000:print"{clear}":fu=0:nm$="":im$="":gosub21000:iffu=0then3470
-3395iffu=1thenprint"{clear}Con la tua fuga hai abbandonato al ":q1=4
+3395iffu=1thenprint"{clear}Hai abbandonato al ":q1=4
 3396iffu=1thenprint"{down}saccheggio la carovana!":fa=fa-1:qq=99
 3397iffu=1thenprint"{down}Questo ti fa perdere un punto di Fascino":gw=1
 3398gosub60:print"{down}Senza guida ti sei perso!":gosub800:goto3480
@@ -121,15 +121,15 @@
 3470print"{down}Terminata la "q1" settimana di scorta":gosub700:gosub800:nm$=""
 3480im$="":print"{clear}":next:ifqq=99goto50000
 3481ifqr=1goto3980
-3490print"{down}Dopo un mese di viaggio con la carovana"
-3500print"sei giunto  nella citta'  di":printtab(15)"{down}{down}{yellow}MARRAKESCH{white}{up}{up}":gw=0:x1=0:gosub61260:forp=1to10:print"{up}";:next:x1=12:gosub61130:forp=1to10:print"{up}";:next:x1=21:gosub61130:x1=5:x2=27:gosub61400:forp=1to15:print"{up}";:next:x1=32:gosub61260:print"{up}{up}":gosub61500:forp=1to13
+3490print"{down}Dopo un mese di viaggio"
+3500print"sei giunto nella citta' di":printtab(15)"{down}{down}{yellow}MARRAKESCH{white}{up}{up}":gw=0:x1=0:forp=1to10:print"{up}";:next:x1=12:forp=1to10:print"{up}";:next:x1=21:x1=5:x2=27:forp=1to15:print"{up}";:next:x1=32:print"{up}{up}":forp=1to13
 3516print"{up}";:next:printtab(12)"{brown}{167}{reverse on}{green} {reverse off}{162}  {brown}{167}{reverse on}{white} {reverse off}{162} {brown}{167}{white}{reverse on} {reverse off}{162}  {brown}{167}{reverse on}{red} {reverse off}{162}":printtab(12)"{brown}{167} {green}{184}{reverse on}{185}{reverse off} {brown}{167} {white}{184}{reverse on}{162}{reverse off}{brown}{167} {white}{184}{reverse on}{185}{reverse off} {brown}{167} {red}{184}{reverse on}{162}{reverse off}":printtab(12)"{brown}{167}    {170}   {170}    {170}":forp=1to9:print"{down}";:next:gosub60000
-3520print"{clear}Ci sono 3 negozi disponibili:":print"{down}{reverse on}* 1 *{reverse off} l'armaiolo fatato":print"{down}{reverse on}* 2 *{reverse off} l'alchimista":print"{down}{reverse on}* 3 *{reverse off} il costruttore di cose magiche{down}":forgg=1to20:print"- ";:next:print"{down}{reverse on}{green}* 4 *{white}{reverse off} voglio rivedere il personaggio"
+3520print"{clear}Ci sono 3 negozi:":print"{down}{reverse on}* 1 *{reverse off} l'armaiolo fatato":print"{down}{reverse on}* 2 *{reverse off} l'alchimista":print"{down}{reverse on}* 3 *{reverse off} il costruttore di cose magiche{down}":forgg=1to20:print"- ";:next:print"{down}{reverse on}{green}* 4 *{white}{reverse off} voglio rivedere il personaggio"
 3552print"{down}{reverse on}{yellow}* 5 *{white}{reverse off} ritorno a casa "
 3553gosub10500:ifn>5thenprint"{up}{up}":goto3553
 3555onngoto3560,3620,3700,3790,3840
-3560print"{clear}Il Negozio dell'ARMAIOLO fatato":print"{down}Sono disponibili 3 Spade Fatate  :":print"{down}{down}{reverse on}ATTENZIONE{reverse off} Non e' permesso possedere":print"{down}piu di una spada fatata!{160}!{160}!{160}!{160}!":ifks>0thenprint"{down}Tu l'hai gia'!":goto3800
-3576print"{down}{down}{reverse on}* 1 *{reverse off} Spada da +  50 % = {92}  7500":print"{down}{reverse on}* 2 *{reverse off} Spada da +  75 % = {92} 10000":print"{down}{reverse on}* 3 *{reverse off} Spada da + 100 % = {92} 20000":gosub38000
+3560print"{clear}Il Negozio dell'ARMAIOLO fatato":print"{down}Sono disponibili 3 Spade Fatate :":print"{down}{down}{reverse on}ATTENZIONE{reverse off} Non e' permesso possedere":print"{down}piu di una spada fatata!{160}!{160}!{160}!{160}!":ifks>0thenprint"{down}Tu l'hai gia'!":goto3800
+3576print"{down}{down}{reverse on}* 1 *{reverse off} Spada da +50 % = {92}  7500":print"{down}{reverse on}* 2 *{reverse off} Spada da +75 % = {92} 10000":print"{down}{reverse on}* 3 *{reverse off} Spada da + 100% = {92} 20000":gosub38000
 3583gosub10500:ifn>4thenprint"{up}{up}":goto3583
 3585print"{down}":onngoto3590,3595,3600,3610
 3590ifdn<7500then39000
@@ -140,8 +140,8 @@
 3602ks=1:dn=dn-20000:at=at+100:wx=wx+1:os$(wx)="Spada fatata +100":goto3605
 3605print"{down}Hai acquistato la Spada Fatata":goto3800
 3610print"{clear}":goto3520
-3620print"{clear}Il negozio dell'ALCHIMISTA":print"{down}Sono disponibili 3 filtri magici che":print"{down}aumentano delle caratteristiche :":print"{down}{reverse on}* 1 *{reverse off} + 1 in Forza        {92} 2000":print"{down}{reverse on}* 2 *{reverse off} + 1 in Destrezza    {92} 1000"
-3630print"{down}{reverse on}* 3 *{reverse off} + 1 in Intelligenza {92} 1000":gosub38000
+3620print"{clear}L'ALCHIMISTA":print"{down}Sono disponibili 3 filtri magici:":print"{down}{reverse on}* 1 *{reverse off} +1 in Forza        {92} 2000":print"{down}{reverse on}* 2 *{reverse off} +1 in Destrezza    {92} 1000"
+3630print"{down}{reverse on}* 3 *{reverse off} +1 in Intelligenza {92} 1000":gosub38000
 3634gosub10500:ifn>4thenprint"{up}{up}":goto3634
 3638print"{down}":onngoto3640,3650,3660,3610
 3640ifdn<2000then39000
@@ -187,7 +187,7 @@
 4036onngoto1350,4050
 4037print"{up}{up}":goto4035
 4050la$="":forzp=1to2:tk=tk+1:print"{clear}"zp"{left}' settimana del viaggio d'andata":print"{down}Stai viaggiando da solo verso le ":print"{down}"zi$:gosub60:im$="":nm$="":gosub20000:fu=0:ifi<4then4070
-4063ifi=4thenprint"{down}{down}Viaggio tranquillo per questa settimana{down}":goto4070
+4063ifi=4thenprint"{down}{down}Viaggio tranquillo questa settimana{down}":goto4070
 4064ifi>4andi<8then4069
 4066gosub12000:gosub11000:gosub6860:gw=1:print"{down}Stai passando attraverso un Bosco":fu=0:gosub33020:iffu=0thengosub5520:goto4070
 4069ifi>4andi<8thengosub30000
@@ -196,13 +196,13 @@
 4125zm$=" il Capo"
 4126print"{down}hai sorpreso"zm$" da solo":print"{down}e inizia un duello all'ultimo sangue!":gosub60000:goto4200
 4130gosub60000:print"{clear}Sei stato scorto da qualcuno e vieni":zz=0:print"{down}circondato da una dozzina di loschi":print"{down}figuri. Il loro capo ti propone un":print"{down}duello all'ultimo sangue ; chi alla"
-4170print"{down}fine sara' sopravissuto potra' prendersi":print"la "zb$" .":gosub60:print"{down}Puoi :":print"{down}{reverse on}* 1 *{reverse off} rinunciare e tornare indietro":print"{down}{reverse on}* 2 *{reverse off} accettare il combattimento"
+4170print"{down}fine sara' sopravissuto potra' prendersi":print"la "zb$" .":gosub60:print"{down}Puoi:":print"{down}{reverse on}* 1 *{reverse off} rinunciare e tornare indietro":print"{down}{reverse on}* 2 *{reverse off} accettare il combattimento"
 4185gosub10500:ifn>2thenprint"{up}{up}":goto4185
 4187onngoto4310,4200
 4200gosub35000:print"{clear}Alla morte del loro capo gli altri si":print"{down}fuggono! Puoi recuperare la":print"{down}{left}"zb$" .":iffa>19thenfa=20:goto4290
 4240print"{down}Questo ti aumenta un punto in fascino":fa=fa+1
 4290gosub810:goto4351
-4310print"{clear}Burlato e beffeggiato inizi il viaggio":zk=1:print"{down}di ritorno .":gosub60:print"{down}Questo ti fa perdere un punto di Fascino":fa=fa-1:gosub60
+4310print"{clear}Burlato e beffeggiato inizi il viaggio":zk=1:print"{down}di ritorno.":gosub60:print"{down}Questo ti fa perdere un punto di Fascino":fa=fa-1:gosub60
 4351forzp=1to2:tk=tk+1:print"{clear}"zp"{left}' settimana del viaggio di ritorno":print"{down}dalle "zi$:gosub60:nm$="":im$="":gosub20000:ifi<4then4370
 4363ifi=4thenprint"{down}{down}Viaggio tranquillo per questa settimana{down}":goto4370
 4364ifi>4andi<8then4369
@@ -216,10 +216,10 @@
 4394ifleft$(zd$,1)="D"then4800
 4400print"{down}{92} 1000 in oro!":dn=dn+1000:print"{down}Possiedi ora {92} "dn:goto4990
 4500print"{down}Un Filtro magico che cura le ferite":wx=wx+1:os$(wx)="Filtro magico":goto4990
-4600print"{down}Un Amuleto incantato che ti accresce":print"{down}di un punto la tua Intelligenza!":wx=wx+1:os$(wx)="Amuleto incantato":in=in+1:goto4990
-4700print"{down}Una Pozione miracolosa che , bevuta ,":print"{down}ti aumenta di un punto la Destrezza":de=de+1:goto4990
+4600print"{down}Un Amuleto incantato che accresce":print"{down}un punto la tua Intelligenza!":wx=wx+1:os$(wx)="Amuleto incantato":in=in+1:goto4990
+4700print"{down}Una Pozione miracolosa che":print"{down}aumenta di un punto la Destrezza":de=de+1:goto4990
 4800print"{down}{92} 2000 in Diamanti!":dn=dn+2000:print"{down}Possiedi ora {92} "dn:goto4990
-4900print"{down}A causa della tua fuga non hai potuto":print"{down}recuperare la "zb$:print"{down}del "zc$:print"{down}e quindi non ricevi ricompensa ."
+4900print"{down}Non hai potuto":print"{down}recuperare la "zb$:print"{down}del "zc$:print"{down}e quindi non ricevi ricompensa ."
 4990print"{down}Terminata la missione torni in taverna":gw=0:ifleft$(zd$,4)="un F"thengosub700:gosub810:goto4993
 4992gosub60000
 4993goto1200
@@ -228,7 +228,7 @@
 5087gosub60000:fu=0:print"{clear}"tab(10)"{reverse on}{yellow} INIZIA{160}LA{160}MISSIONE {reverse off}{white}":print"{down}Parti dalla Fortezza del Barone Burlund":print"per compiere da solo la tua"k"{left}' missione":gosub20000:im$="":gosub11000:d1=int(3*rnd(0))+1
 5193fu=0:print"{down}Ti stai avvicinando al tuo obbiettivo e":ifleft$(gd$,1)="c"thengosub33000:goto5900
 5240ond1goto5250,5300,5350
-5250print"avvisti di lontano un gruppo di";nm:printnm$" che non{160}si sono ancora":print"accorti della tua presenza!":gosub60:print"{down}Puoi :":print"{down}{reverse on}* 1 *{reverse off} allontanarti al galoppo":print"{down}{reverse on}* 2 *{reverse off} avvicinarti deciso  "
+5250print"avvisti un gruppo di";nm:printnm$" che non{160}si sono ancora":print"accorti di te!":gosub60:print"{down}Puoi :":print"{down}{reverse on}* 1 *{reverse off} allontanarti al galoppo":print"{down}{reverse on}* 2 *{reverse off} avvicinarti deciso  "
 5267print"{down}{reverse on}* 3 *{reverse off} tentare un' imboscata"
 5268gosub10500:ifn>3thenprint"{up}{up}":goto5268
 5270print"{clear}":onngoto5280,5400,5291
@@ -258,21 +258,21 @@
 5634print"La tua Robustezza (Ro) e' ora "ro:rm=0:rf=ro:return
 5640print"Un "gf$:wx=wx+1:os$(wx)=left$(gf$,9):print"che ti aumenta di uno la Fortuna!":fr=fr+1:iffr>19thenfr=20
 5645return
-5900::iffu=3thenprint"Sei riuscito a scappare dai cattivi    "
+5900iffu=3thenprint"Sei riuscito a scappare dai cattivi    "
 5911iffu=3thenprint"armigeri di Movas con questa fuga e hai"
 5912iffu=0thenprint"Con questo combattimento hai"
 5914iffu=1thenprint"Con questa fuga non hai"
 5916iffu=4thenprint"Dopo questo incontro rientri poiche'hai"
 5920printfm$:iffu=1thenprint"Questo ti fa'perdere un punto di Fascino":fa=fa-1
 5931iffu=0thengosub5500
-5933print"{down}Terminata la"k"{left}' settimana ritorni":print"nella fortezza del Barone Burlund .{down}":t=0:ft=0:x1=12:gosub61130:forp=1to10:print"{up}";:next:x1=21:gosub61130:print"{up}{up}":gosub61500:x1=0:print"{white}{up}{up}":gosub700:gosub800:k=k+1
+5933print"{down}Terminata la"k"{left}' settimana ritorni":print"nella fortezza del Barone Burlund .{down}":t=0:ft=0:x1=12:forp=1to10:print"{up}";:next:x1=21:print"{up}{up}":x1=0:print"{white}{up}{up}":gosub700:gosub800:k=k+1
 5991print"{clear}":nextzy
-6010print"{down}{clear}Hai terminato il tuo ingaggio;puoi :":print"{down}{down}{reverse on} * 1 * {reverse off} Rinnovare l'ingaggio alle stesse":print"{down}condizioni":print"{down}{down}{reverse on} * 2 * {reverse off} Ritornare in citta per cercare":print"{down}nuove avventure"
+6010print"{down}{clear}Hai terminato il tuo ingaggio;puoi:":print"{down}{down}{reverse on} * 1 * {reverse off} Rinnovare l'ingaggio alle stesse":print"{down}condizioni":print"{down}{down}{reverse on} * 2 * {reverse off} Ritornare in citta per cercare":print"{down}nuove avventure"
 6060print"{down}{down}{reverse on} * 3 * {reverse off} rivedere "np$" prima":print"{down}di scegliere!"
 6100gosub10500:ifn>3thenprint"{up}{up}":goto6100
 6110onngoto5000,1350,6120
 6120su=1:gosub1200:su=0:goto6010
-6200ga$="pattugliare i confini d'oriente e":gb$="respingere le incursioni periodiche":gc$="dei feroci mongoli delle steppe .":gd$="":nm$="mongoli":t$="monili e pelli":t=int(50*rnd(0))+101
+6200ga$="pattugliare i confini d'oriente e":gb$="respingere le incursioni":gc$="dei feroci mongoli delle steppe .":gd$="":nm$="mongoli":t$="monili e pelli":t=int(50*rnd(0))+101
 6260fm$="respinto l'incursione dei mongoli":return
 6300ga$="distruggere una banda di furfanti che":gb$="assale i viandanti e rapina   i mer-":gc$="canti e i contadini .":gd$="":nm$="briganti ":t$="oro e argento ":t=int(510*rnd(0))+101
 6360fm$="sgominato la banda di furfanti ":return
@@ -294,8 +294,8 @@
 6906t=int(50*rnd(0))+24:fm$="ricacciato i Boscipedi nella giungla":return
 9000ifee<>6andat<200then9900
 9020print"{clear}{yellow}":forp=1to40:print"*";:next:printtab(10)"{down}{down}{white}   SEI{160}DIVENTATO{160}UN{160}EROE":print"{down}   e vieni chiamato nel Firmamento":print"{down}   dove  vivono  i Quasidei!!!":print"{down}{down}{yellow}":forp=1to40:print"*";:next:print"{down}{down}{down}{white}Per divenire EROE hai impiegato "tk
-9080print"{down}settimane di avventura ."
-9900print"{down}{down}{down}VUOI{160}INIZIARE{160}UN'{160}ALTRA{160}AVVENTURA{160}(S/N){160}?"
+9080print"{down}settimane di avventura."
+9900print"{down}{down}{down}VUOI RICOMINCIAREN (S/N)?"
 9910getp$:ifp$<>"s"andp$<>"n"then9910
 9920ifp$="s"thenrun
 9930:
@@ -338,7 +338,7 @@
 20210fu=0:ifam>90thenam=am-10
 20213ifam<22thenam=am+9
 20220gosub21000:fu=0:goto20999
-20500print"{down} Ti sei accorto dell'imboscata tesa da":printnm;im$" ; puoi :":print"{down}* 1 * Evitare  l'imboscata":print"* 2 * Attaccare di sorpresa"
+20500print"{down} Ti sei accorto dell'imboscata tesa da":printnm;im$" ;puoi:":print"{down}* 1 * Evitare l'imboscata":print"* 2 * Attaccare di sorpresa"
 20540gosub10500:ifn>2thenprint"{up}{up}":goto20540
 20550onngoto20570,20600
 20560print"{up}{up}":goto20540
@@ -348,7 +348,7 @@
 20610print"hai ucciso uno dei"im$:nm=nm-1:print:goto20210
 20999im$=" ":return
 21000fu=0:y=1
-21005print"{reverse on}      "y"{left}'  turno di mischia       {reverse off}":ifnm=1thenprint"{down}Sei in mischia con un solo avversario{down}":goto21030
+21005print"{reverse on}    "y"{left}'  turno di mischia     {reverse off}":ifnm=1thenprint"{down}Sei in mischia con un solo avversario{down}":goto21030
 21020print"{down}Sei in mischia con"nm"avversari{down}"
 21030forj=1tonm:gosub60:ifnm>=4thenpa=int(at/4):cs=0:goto21050
 21040pa=int(at/nm)+10:cs=0:xf=1
@@ -368,10 +368,10 @@
 22070ts=0:ifat>=apthents=1
 22090ifts=1andcc>=apthenprint"{down}^^ Hai ucciso {reverse on}due{reverse off} avversari":nm=nm-2:goto23000
 22099ifnm=1then22110
-22100ifts=1andcc<apthenprint"{down}^ Hai ucciso  un  avversario":nm=nm-1:goto23000
+22100ifts=1andcc<apthenprint"{down}^ Hai ucciso un avversario":nm=nm-1:goto23000
 22110ifts=1andcc<apthenprint"{down}^ Hai ucciso l'ultimo avversario":nm=nm-1
 23000gosub60:ifrf<=0thenrf=0
-23010print"{down}la tua robustezza e' ora "rf:gosub70:ifrf<=0thenprint"{down}Sei morto!{160}!{160}!{160}!{160}!{160}!":goto9900
+23010print"{down}la tua robustezza e' ora "rf:gosub70:ifrf<=0thenprint"{down}Sei morto!!":goto9900
 23020ifnm=0then29200
 23021ifnm>1thenprint"{down}Gli avversari sono ora"nm
 23022ifnm=1thenprint"{down}Hai di fronte un solo avversario"
@@ -389,7 +389,7 @@
 29220print"{down}Puoi riprendere la tua avventura":gosub810:print"{clear}":return
 30000fu=0:gosub32000:gosub11000:gosub6860:nm$=im$:pl1=int(2*rnd(0))+1:ifpl1=1thenpl$="una palude melmosa"
 30040ifpl1=2thenpl$="un villaggio "
-30050gw=1:print"{down}Stai passando presso "pl$:print"{down}e ti accorgi che ,in lontananza,"nm:print"{down}{left}"nm$"sono sulla tua ":print"{down}strada e stanno venendo verso di te":gosub60:gosub33030:iffu=0thengosub5520
+30050gw=1:print"{down}Stai passando presso "pl$:print"{down}e ti accorgi che,in lontananza,"nm:print"{down}{left}"nm$"sono sulla tua ":print"{down}strada e stanno venendo verso di te":gosub60:gosub33030:iffu=0thengosub5520
 30100return
 32000a$="1":x=int(12*rnd(0))+1:onxgoto32100,32150,32200,32250,32300,32350,32400,32450,32500,32550,32600
 32090im$=" Sauridi ":goto32990
@@ -415,7 +415,7 @@
 33202ifval(a$)=1then33250
 33210print"{clear}Loro non sono amichevoli e ti attaccano{down}{down}":gosub60:gosub21000:goto34000
 33250gosub34500:ifkz=1thenprint"{clear}":goto33300
-33272forp=1to200:next:print"{down}I "nm;" ";nm$:print"incantati , ti regalano :":gosub5530:gosub60000:print"{clear}":goto34000
+33272forp=1to200:next:print"{down}I "nm;" ";nm$:print"incantati,ti regalano:":gosub5530:gosub60000:print"{clear}":goto34000
 33300gosub21000:goto34000
 33400gosub34010:gosub60000:print"{clear}":gosub21000:goto34000
 34000return
@@ -423,9 +423,9 @@
 34140print"{down}i"nm;nm$" ti hanno visto,":print"e ti attaccano all'improvviso!":gosub70:print"{down}ricevi "nm" ferite!":rf=rf-nm:return
 34200ifleft$(nm$,2)<>" L"orks<>0then34210
 34207gosub80:goto34225
-34210print"{down}Hai ucciso un avversario .":nm=nm-1
+34210print"{down}Hai ucciso un avversario.":nm=nm-1
 34225print"{down}Sei in mischia con";nm;nm$:return
-34500kz=0:bt=0:print"{clear}Per convincerli devi":print"incantarli!":print"Devi tirare un dado a 21 e il risultato":print"deve essere inferiore o uguale al":print"tuo fascino ("fa") ."
+34500kz=0:bt=0:print"{clear}Per convincerli devi":print"incantarli!":print"Tiri un dado a 21 e il risultato":print"non deve essere superiore al":print"tuo fascino ("fa") ."
 34570gosub20:gosub60:iffa>=d6then34640
 34620print"{down}Hai fallito! ":print"{down}I "nm;nm$"si sono arrabiati e":print"{down}ti attaccano!":kz=1:gosub60000:return
 34640fu=4:print"{down}Ci sei riuscito!{down}":return
@@ -453,14 +453,14 @@
 35300ifleft$(la$,1)="V"thengosub35400
 35302ifleft$(la$,1)="L"thengosub35450
 35303gosub60000:print"{clear}":goto35100
-35320print"{down}Sei cresciuto":print"{down}del 7 % in attacco!":at=at+7:gosub60000:return
+35320print"{down}Sei cresciuto":print"{down}del 7% in attacco!":at=at+7:gosub60000:return
 35400print"{down}Lo sguardo del "la$" ti":fo=fo-1:at=at-5:pa=pa-5:print"{down}debilita! Perdi un punto di Forza":print"{down}La tua Forza e' ora "fo"!":iffo<=0then9000
 35440return
 35450print"{down}L'urlo del "la$" ti paralizza":de=de-1:print"{down}perdi un punto in destrezza!":hp=hp-5:print"{down}La tua Destrezza e' ora "de"!":ifde<=0then9000
 35490return
 38000print"{down}{reverse on}* 4 *{reverse off} GRAZIE tornero' piu tardi!":return
 39000print"{down}Non hai soldi!":goto3800
-40000print"{down}Per non farti scorgere devi tirare un ":print"{down}dado a 21 e il risultato deve essere":print"{down}uguale o minore della tua destrezza("de"{left})":gosub20:gosub60:ifd6>dethenprint"{down}Hai fallito!":zz=1:return
+40000print"{down}Per non farti scorgere devi tirare un ":print"{down}dado a 21 e il risultato non deve essere":print"{down}inferiore alla tua destrezza("de"{left})":gosub20:gosub60:ifd6>dethenprint"{down}Hai fallito!":zz=1:return
 40150print"{down}Ci sei riuscito!":zz=0:return
 41000d9=int(8*rnd(0))+1:ond9goto41020,41030,41040,41050,41060,41070,41080,41090
 41020np$="Reina":goto41100
@@ -482,12 +482,5 @@
 50546ifqt<q0thenprint"nel viaggio recuperi "qt" di Ro,":rf=rf+qt
 50550ifq0=4thenreturn
 50551print"dopo "q0" settimane sei tornato a casa":gosub810:su=0:goto1200
-60000getb$:print"{down}{reverse on}{purple}Premi un tasto           {reverse off}{up}{white}"
+60000getb$:print"{down}{reverse on}{purple}Premi un tasto{reverse off}{up}{white}"
 60010getp$:ifp$=""then60010
-60020return
-61000:
-61010return
-61130return
-61260return
-61400return
-61500return
