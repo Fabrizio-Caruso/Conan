@@ -5,16 +5,15 @@
 60forp=1to900:next:return
 70forp=1to300:next:return
 80print"{down}I Lupi Mannari si uccidono con la":print"Spada fatata":return
-100print"{clear}{yellow}"tab(10)"La Systems Editoriale":print"{up}"tab(17)"{reverse on}CONAN":forkh=0to2000:next
+100print"{clear}{yellow}"tab(10)"Systems Editoriale":print"{up}"tab(17)"{reverse on}CONAN":gosub60
 150print"{up}{up}{up}":gosub60000:x1=0:print"{clear}":printtab(16)"{yellow}{down}{down}INDICE{down}{down}":forp=1to10:print"{up}";:next:x1=32:x1=0:forp=1to8:print"{up}";:next:printtab(7)"{white}1  Istruzioni":printtab(7)"{down}{down}{down}{down}2  Inizio dell'Avventura {reverse off}"
 176gosub10500:ifn>2thenprint"{up}{up}":goto176
 177onngoto210,400
 210:
 399gosub60000
 400print"{clear}"tab(8)"{reverse on} Personaggio {reverse off}":print"{down}{down}{reverse on} * 1 * {reverse off} Swenha":print"{down}Fo=9;In=18;De=11;Fr=14;Ro=11;Fa=17.":print"{down}{down}{reverse on} * 2 * {reverse off} Thurlkh":print"{down}Fo=17;In=10;De=13;Fr=10;Ro=16;Fa=9."
-540print"{down}{down}{reverse on} * 3 * {reverse off} Colvor":print"{down}Fo=12;In=14;De=16;Fr=18;Ro=12;Fa=12."
-580gosub10500:ifn>4thenprint"{up}{up}":goto580
-600onngoto10000,10100,10200
+580gosub10500:ifn>2thenprint"{up}{up}":goto580
+600onngoto10000,10100
 700ee=0:iffo>19thenee=ee+1:fo=20
 710ifin>19thenee=ee+1:in=20
 720ifde>19thenee=ee+1:de=20
@@ -174,9 +173,9 @@
 4019print"la"zb$" sia ora":printzg$;zh$:zr=int(4*rnd(0)):onzrgoto4024,4025,4026,4027
 4024zi$="rovine del Castello Stregato":goto4030
 4025zi$="catacombe della Citta' Morta":goto4030
-4026zi$="misteriose Caverne Nere":goto4030
-4027zi$="montagne degli Spettri Urlanti":goto4030
-4030print"a due settimane di viaggio , nelle":printzi$;" .":gosub60:print"{down}puoi :":print"{down}{reverse on} * 1 * {reverse off} Rinunciare all'incarico":print"{down}{reverse on} * 2 * {reverse off} Accettare la missione  "
+4026zi$="Caverne Nere":goto4030
+4027zi$="montagne degli Spettri":goto4030
+4030print"a due settimane di viaggio, nelle":printzi$;" .":gosub60:print"{down}puoi:":print"{down}{reverse on} * 1 * {reverse off} Rinunciare all'incarico":print"{down}{reverse on} * 2 * {reverse off} Accettare la missione  "
 4035gosub10500:ifn>2thenprint"{up}{up}":goto4035
 4036onngoto1350,4050
 4037print"{up}{up}":goto4035
@@ -296,7 +295,6 @@
 9935next:print"{clear}Ciaoooo!":end
 10000np$="Swenha":fo=9:in=17:de=12:fr=13:ro=11:fa=16:at=fo*5:rf=ro:goto1200
 10100np$="Thrulkh":fo=16:in=10:de=14:fr=9:ro=16:fa=9:at=fo*5:rf=ro:goto1200
-10200np$="Colvor":fo=11:in=12:de=16:fr=15:ro=10:fa=11:at=fo*5:rf=ro:goto1200
 10300d1=int(6*rnd(0))+1:d2=int(6*rnd(0))+1:d3=d1+d2+6:gosub60:return
 10500print"{down}{reverse on}{purple}Batti il numero {up}{reverse off}{white}"
 10520getn$:n=val(n$):ifn=0then10520
@@ -385,15 +383,9 @@
 30040ifpl1=2thenpl$="un villaggio "
 30050gw=1:print"{down}Stai passando presso "pl$:print"{down}e ti accorgi che "nm:print"{down}{left}"nm$"sono sulla tua ":print"{down}strada e stanno venendo verso di te":gosub60:gosub33030:iffu=0thengosub5520
 30100return
-32000a$="1":x=int(12*rnd(0))+1:onxgoto32100,32150,32200,32250,32300,32350,32400,32450,32500,32550,32600
-32090im$=" Sauridi ":goto32990
-32100im$=" Tigroidi ":goto32990
+32000a$="1":x=int(6*rnd(0))+1:onxgoto32150,32300,32450,32500,32550,32600
 32150im$=" Coboldi ":goto32990
-32200im$=" Droll ":goto32990
-32250im$=" Centipedi ":goto32990
 32300im$=" Grandi Giganti ":a$="1":goto32990
-32350im$=" Grandi Serpenti ":goto32990
-32400im$=" Demoni volanti ":goto32990
 32450im$=" Lupi mannari ":a$="0":goto32990
 32500im$=" Rospi Gracchianti ":goto32990
 32550im$=" Grifoni alati ":goto32990
@@ -456,8 +448,8 @@
 39000print"{down}Non hai soldi!":goto3800
 40000print"{down}Per non farti scorgere devi tirare un ":print"{down}dado a 21 e il risultato non deve essere":print"{down}inferiore alla tua destrezza("de"{left})":gosub20:gosub60:ifd6>dethenprint"{down}Hai fallito!":zz=1:return
 40150print"{down}Ci sei riuscito!":zz=0:return
-50000qq=0:print"{down}Vaghi nel Deserto":tt=tt+1:print"{down}se in una settimana non trovi":print"{down}un'oasi sei morto!":gosub60:print"{down}Per trovare un'oasi devi tirare un dado":print"{up}a 21 e il risultato deve essere uguale"
-50060print"o inferiore alla tua Fortuna ("fr") .":gosub20:gosub60:iffr>=d6then50500
+50000qq=0:print"{down}Vaghi nel Deserto":tt=tt+1:print"{down}se in una settimana non trovi":print"{down}un'oasi sei morto!":gosub60:print"{down}Per trovare un'oasi devi tirare un dado":print"{up}a 21 e il risultato non deve essere"
+50060print"superiore alla tua Fortuna ("fr") .":gosub20:gosub60:iffr>=d6then50500
 50120print"{down}Sei morto!":goto9900
 50500print"{down}Oasi trovata!":gosub60000:print"{clear}Nell'oasi trovi una carovana di nomadi":print"{down}che si stanno dirigendo verso la tua":print"{down}citta' e ti prendono con loro ;{down}":gosub60:q0=int(2*rnd(0))+2
 50507tk=tk+q0:qw=0
@@ -465,6 +457,7 @@
 50544qt=ro-rf:ifqt>=q0thenprint"nel viaggio recuperi"q0" di Ro,":rf=rf+q0
 50546ifqt<q0thenprint"nel viaggio recuperi "qt" di Ro,":rf=rf+qt
 50550ifq0=4thenreturn
-50551print"dopo "q0" settimane sei tornato a casa":gosub810:su=0:goto1200
-60000getb$:print"{down}{reverse on}{purple}Premi un tasto{reverse off}{up}{white}"
+50551print"dopo "q0" settimane sei a casa":gosub810:su=0:goto1200
+60000getb$:print"{down}{purple}Premi un tasto{up}{white}"
 60010getp$:ifp$=""then60010
+60020return
