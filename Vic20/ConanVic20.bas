@@ -225,7 +225,7 @@
 5288ifnm$="armigeri "thenfu=3
 5290goto5900
 5291gosub34010:gosub60000:print"{clear}":goto5420
-5300print"incontri un gruppo di";nm:printnm$;" che ti si fanno incontro!":gosub60:print"{down}Puoi :":print"{down}{reverse on}* 1 *{reverse off} scappare  al galoppo":print"{down}{reverse on}* 2 *{reverse off} avvicinarti risoluto"
+5300print"incontri un gruppo di";nm:printnm$;" che ti si avvicinano!":gosub60:print"{down}Puoi:":print"{down}{reverse on}* 1 *{reverse off} scappare  al galoppo":print"{down}{reverse on}* 2 *{reverse off} avvicinarti risoluto"
 5326gosub10500:ifn>2thenprint"{up}{up}":goto5326
 5330print"{clear}":onngoto5340,5400
 5340ifnm$<>"armigeri "thenfu=1
