@@ -6,9 +6,8 @@
 70forp=1to300:next:return
 80print"{down}I Lupi Mannari si uccidono con la":print"Spada fatata":return
 100print"{clear}{yellow}"tab(10)"Systems Editoriale":print"{up}"tab(17)"{reverse on}CONAN":gosub60
-210:
 399gosub60000
-400print"{clear}"tab(8)"{reverse on} Personaggio {reverse off}":print"{down}{down}{reverse on} * 1 * {reverse off} Swenha":print"{down}Fo=9;In=18;De=11;Fr=14;Ro=11;Fa=17.":print"{down}{down}{reverse on} * 2 * {reverse off} Thurlkh":print"{down}Fo=17;In=10;De=13;Fr=10;Ro=16;Fa=9."
+400print"{clear}"tab(8)"{reverse on}Personaggio{reverse off}":print"{down}{down}{reverse on} * 1 * {reverse off} Swenha":print"{down}Fo=9;In=18;De=11;Fr=14;Ro=11;Fa=17.":print"{down}{down}{reverse on} * 2 * {reverse off} Thurlkh":print"{down}Fo=17;In=10;De=13;Fr=10;Ro=16;Fa=9."
 580gosub10500:ifn>2thenprint"{up}{up}":goto580
 600onngoto10000,10100
 700ee=0:iffo>19thenee=ee+1:fo=20
@@ -64,9 +63,9 @@
 1950ifdn>=100then1980
 1960print"{clear}"np$",lo Zoppo non fa credito!":gosub60:goto1390
 1980dn=dn-100:rf=rf+1:print"{clear}Hai recuperato":print"{up}un punto di robustezza;sei ora a Ro"rf:tk=tk+1:gosub60:print"Possiedi {92}"dn:gosub60:goto1390
-2000tk=tk+1:print"{clear}Stai dirigendoti verso":print"{down}"lb$:fu=0:im$="":nm$="":gosub20000:ifi<=3then2100
+2000tk=tk+1:print"{clear}Ti dirigi verso":print"{down}"lb$:fu=0:im$="":nm$="":gosub20000:ifi<=3then2100
 2050fu=0:bt=0:gosub30000
-2100print"{down}Sei arrivato senza altri incontri":print"presso "lb$:print"dove si erge una torre spaventosa!{down}{down}":x1=16:gosub700:gosub810:print"{clear}Il "la$:print"sbuca da dietro la Torre!":gosub60:print"{down}Ti rendi conto che si tratta di uno"
+2100print"{down}Sei arrivato senza incontri presso "lb$:print"dove si erge una torre spaventosa!{down}{down}":x1=16:gosub700:gosub810:print"{clear}Il "la$:print"sbuca da dietro la Torre!":gosub60:print"{down}Ti rendi conto che si tratta di uno"
 2150print"scontro mortale.":gosub60:print"{down}Puoi:":print"{down}{reverse on}* 1 *{reverse off} fuggire":print"{down}{reverse on}* 2 *{reverse off} accettare il combattimento{down}"
 2190gosub10500:ifn>2thenprint"{up}{up}":goto2190
 2210onngoto2220,2300
