@@ -50,13 +50,13 @@
 1471ifleft$(la$,1)="V"thena9=4000:goto1479
 1472ifleft$(la$,1)="D"thena9=1000:goto1479
 1473a9=500
-1479print"{clear}{up}{reverse on}* 1 *{reverse off} Un "la$" che":print"vive presso "lb$:print"terrorizza la regione;":print"taglia di {reverse on}{yellow}{92}"a9"{left}{white}{reverse off} a chi lo uccidera'.":gosub60:gosub1600:print"{down}{reverse on}* 3 *{reverse off} Sta' per partire la Carovana"
-1510print"che tutti i mesi si reca a":print"Marrakesch,dove vengono fabbricate armi e oggetti magici":gosub60:goto1710
+1479print"{clear}{up}{reverse on}* 1 *{reverse off} Un "la$" che":print"vive presso "lb$"Terrorizza la regione; taglia di {reverse on}{yellow}{92}"a9"{left}{white}{reverse off} a chi lo uccidera'.":gosub60:gosub1600:print"{down}{reverse on}* 3 *{reverse off} Sta' per partire la Carovana"
+1510print"che tutti i mesi si reca a Marrakesch,dove vengono fabbricate oggetti magici":gosub60:goto1710
 1600gosub900:za$=ss$:gosub900:zb$=ss$:gosub900:zc$=ss$:gosub900:zd$=ss$:ifleft$(zb$,2)=" F"orleft$(zb$,2)=" M"thenza$="Hanno rapito "
 1620ifleft$(zb$,2)=" D"thenza$="E'fuggita "
 1650print"{down}{reverse on}* 2 *{reverse off}{right}"za$;"la"zb$:print"di un "zc$" e si offre una ricompensa:{yellow}"zd$"{white}a chi la riportera'.":zk=0:gosub60:restore:return
 1710print"{down}{reverse on}* 4 *{reverse off} Il  Barone  Burlund offre {yellow}{92} 1000{white} per un mese di servizio.":gosub60:ifrf>=rothen1900
-1800print"{down}{reverse on}* 5 *{reverse off} Restare in taverna per una settimana e recuperare un punto di":print"Robustezza;costo vitto e alloggio {purple}{92} 100{white}":gosub60
+1800print"{down}{reverse on}* 5 *{reverse off} Restare in taverna per una settimana e recuperare un punto di Robustezza;costo vitto e alloggio {purple}{92} 100{white}":gosub60
 1900gosub10500:ifn>5thenprint"{up}{up}":goto1900
 1920ifrf>=roandn=5thenprint"{up}{up}":goto1900
 1930onngoto2000,4000,3000,5000,1950
