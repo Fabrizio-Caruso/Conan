@@ -6,9 +6,6 @@
 70forp=1to300:next:return
 80print"{down}I Lupi Mannari si uccidono con la":print"Spada fatata":return
 100print"{clear}{yellow}"tab(10)"Systems Editoriale":print"{up}"tab(17)"{reverse on}CONAN":gosub60
-150print"{up}{up}{up}":gosub60000:x1=0:print"{clear}":printtab(16)"{yellow}{down}{down}INDICE{down}{down}":forp=1to10:print"{up}";:next:x1=32:x1=0:forp=1to8:print"{up}";:next:printtab(7)"{white}1  Istruzioni":printtab(7)"{down}{down}{down}{down}2  Inizio dell'Avventura {reverse off}"
-176gosub10500:ifn>2thenprint"{up}{up}":goto176
-177onngoto210,400
 210:
 399gosub60000
 400print"{clear}"tab(8)"{reverse on} Personaggio {reverse off}":print"{down}{down}{reverse on} * 1 * {reverse off} Swenha":print"{down}Fo=9;In=18;De=11;Fr=14;Ro=11;Fa=17.":print"{down}{down}{reverse on} * 2 * {reverse off} Thurlkh":print"{down}Fo=17;In=10;De=13;Fr=10;Ro=16;Fa=9."
@@ -54,8 +51,8 @@
 1471ifleft$(la$,1)="V"thena9=4000:goto1479
 1472ifleft$(la$,1)="D"thena9=1000:goto1479
 1473a9=500
-1479print"{clear}{up}{reverse on}* 1 *{reverse off} Un "la$" che":print"vive presso "lb$:print"terrorizza gli abitanti della regione ;":print"taglia di {reverse on}{yellow}{92}"a9"{left}{white}{reverse off} a chi lo uccidera'.":gosub60:gosub1600:print"{down}{reverse on}* 3 *{reverse off} Sta' per partire la Carovana"
-1510print"che tutti i mesi si reca a":print"Marrakesch ,dove vengono fabbricate armi e oggetti magici":gosub60:goto1710
+1479print"{clear}{up}{reverse on}* 1 *{reverse off} Un "la$" che":print"vive presso "lb$:print"terrorizza la regione;":print"taglia di {reverse on}{yellow}{92}"a9"{left}{white}{reverse off} a chi lo uccidera'.":gosub60:gosub1600:print"{down}{reverse on}* 3 *{reverse off} Sta' per partire la Carovana"
+1510print"che tutti i mesi si reca a":print"Marrakesch,dove vengono fabbricate armi e oggetti magici":gosub60:goto1710
 1600gosub900:za$=ss$:gosub900:zb$=ss$:gosub900:zc$=ss$:gosub900:zd$=ss$:ifleft$(zb$,2)=" F"orleft$(zb$,2)=" M"thenza$="Hanno rapito "
 1620ifleft$(zb$,2)=" D"thenza$="E'fuggita "
 1650print"{down}{reverse on}* 2 *{reverse off}{right}"za$;"la"zb$:print"di un "zc$" e si offre":print"una ricompensa:{yellow}"zd$:print"{white}a chi la riportera'.":zk=0:gosub60:restore:return
@@ -83,7 +80,7 @@
 3110gosub10500:ifn>3thenprint"{up}{up}":goto3110
 3130onngoto1200,3140,3230
 3140ifdn>=1000then3210
-3150print"{clear}{down}Possiedi solo {92} "dn" e vieni":print"{down}allontanato dalla carovana .":print"{down}Il capocarovaniere ti dice :":print"{down}"np$" torna quando avrai piu soldi!":gosub60000:goto1200
+3150print"{clear}{down}Possiedi solo {92} "dn" e vieni":print"{down}allontanato dalla carovana.":print"{down}Il capocarovaniere ti dice :":print"{down}"np$" torna quando avrai piu soldi!":gosub60000:goto1200
 3210dn=dn-1000:print"{clear}Dopo un mese di viaggio tranquillo,":tk=tk+4:qw=1:q0=4:gosub50542:goto3500
 3230print"{clear}Sei arruolato come mercenario di scorta":gosub60
 3240forq1=1to4:tk=tk+1:q2=int(3*rnd(0))+1:onq2goto3270,3300,3400
@@ -154,7 +151,7 @@
 3750ifdn<1000then39000
 3752dn=dn-1000:wx=wx+1:os$(wx)="Filtro Magico":printqq$os$(wx):goto3800
 3790su=1:gosub1200:su=0:print"{clear}":goto3520
-3800gosub700:print"{down}Vuoi continuare gli acquisti (S/N)?"
+3800gosub700:print"{down}Vuoi continuare gli acquisti?"
 3810gets$:ifs$=""then3810
 3820ifs$="s"thenprint"{clear}":goto3520
 3830ifs$="n"then3840
@@ -167,7 +164,7 @@
 4001zq$=" Segretario privato":goto4010
 4002zq$="l'Amministratore":goto4010
 4003zq$=" Gran Khan":goto4010
-4010print"{clear}Sei ricevuto dal"zq$:print"del "zc$" e ti":print"viene fornita una descrizione accurata":print"della "zb$". Viene":print"confermata la ricompensa pattuita :":print"'{yellow}"zd$"{white}'.":gosub60:print"{down}Da informazioni raccolte pare che "
+4010print"{clear}Sei ricevuto dal"zq$:print"del "zc$" e ti":print"viene fornita una descrizione":print"della "zb$". Viene":print"confermata la ricompensa pattuita :":print"'{yellow}"zd$"{white}'.":gosub60:print"{down}Da informazioni raccolte pare che "
 4017ifleft$(zb$,2)=" D"thenzg$="nascosta":zh$=" con il suo Amante":goto4019
 4018zg$="custodita":zh$=" da una banda di briganti"
 4019print"la"zb$" sia ora":printzg$;zh$:zr=int(4*rnd(0)):onzrgoto4024,4025,4026,4027
@@ -288,18 +285,18 @@
 9000ifee<>6andat<200then9900
 9020print"{clear}{yellow}":forp=1to40:print"*";:next:printtab(10)"{down}{down}{white}   SEI{160}DIVENTATO{160}UN{160}EROE":print"{down}   e vieni chiamato nel Firmamento":print"{down}   dove  vivono  i Quasidei!!!":print"{down}{down}{yellow}":forp=1to40:print"*";:next:print"{down}{down}{down}{white}Per divenire EROE hai impiegato "tk
 9080print"{down}settimane di avventura."
-9900print"{down}{down}{down}RICOMINCIAREN (S/N)?"
+9900print"{down}{down}{down}RICOMINCIAREN?"
 9910getp$:ifp$<>"s"andp$<>"n"then9910
 9920ifp$="s"thenrun
 9930:
-9935next:print"{clear}Ciaoooo!":end
+9935next:print"{clear}Ciao!":end
 10000np$="Swenha":fo=9:in=17:de=12:fr=13:ro=11:fa=16:at=fo*5:rf=ro:goto1200
 10100np$="Thrulkh":fo=16:in=10:de=14:fr=9:ro=16:fa=9:at=fo*5:rf=ro:goto1200
 10300d1=int(6*rnd(0))+1:d2=int(6*rnd(0))+1:d3=d1+d2+6:gosub60:return
 10500print"{down}{reverse on}{purple}Batti il numero {up}{reverse off}{white}"
 10520getn$:n=val(n$):ifn=0then10520
 10530return:data"Drago di sangue","Demone Rosso","Minotauro gigante","Golem di pietra":data"Pericoloso Brigante","Tirannosauro Atrox","Vampiro Maledetto":data"Licantropo nero","la Grande palude Viola","il Monte di Vetro"
-10546data"la Foresta dei Fantasmi","la Collina Stregata","il Deserto Infuocato":data"il Lago di Lava melmosa","il Vulcano dei 3 Fuochi":data"la Grotta dell'impiccato","Si e'persa ":data"Hanno rubato ","E'scomparsa ","Non si trova ","Hanno rubato "
+10546data"la Foresta dei Fantasmi","la Collina Stregata","il Deserto Infuocato":data"il Lago di Lava","il Vulcano dei 3 Fuochi":data"la Grotta dell'impiccato","Si e'persa ":data"Hanno rubato ","E'scomparsa ","Non si trova ","Hanno rubato "
 10610data"Si ricerca ","E'sparita ","E'sparita ":data" Nonna"," Ballerina"," Statua d'oro"," Moglie":data" Pergamena Sacra"," Perla Rossa"," Gemma Verde"," Pietra Arcana":data"Sultano di Kabir","Nobile locale","Prete-Mago di VETH"
 10641data"Ricco Mercante":data"Cerusico di KHOR","Potente Ufficiale","Dignitario di Corte":data"Sacerdote di LYSS","Oro per {92} 1000","un Filtro magico":data"un Amuleto incantato","una Pozione miracolosa","Oro per {92} 1000"
 10652data"un Filtro magico","una Pozione Miracolosa","Diamanti per {92} 2000"
@@ -309,7 +306,7 @@
 11045ifat>200thenx=6:xy=3.5
 11050nm=int(x*rnd(0))+3:am=int((int((41-nm)*rnd(0))+21)*xy):ifam>95thenam=95
 11100return
-12000a$="0":x=int(12*rnd(0))+1:onxgoto12100,12150,12200,12250,12300,12350,12400,12450,12500,12550,12600
+12000a$="0":x=int(9*rnd(0))+1:onxgoto12100,12150,12200,12250,12300,12350,12550,12600
 12090nm$=" Zombi ":goto12990
 12100nm$=" Elfi ":a$="1":goto12990
 12150nm$=" Uomini Uccello ":a$="1":goto12990
@@ -317,9 +314,6 @@
 12250nm$=" Pentauri ":a$="1":goto12990
 12300nm$=" Orchi cattivi ":goto12990
 12350nm$=" Uomini Lupo ":a$="1":goto12990
-12400nm$=" Serpenti alati ":goto12990
-12450nm$=" Ragni pelosi ":goto12990
-12500nm$=" Orchi ":goto12990
 12550nm$=" Gnomi ":a$="1":goto12990
 12600nm$=" Nani giganti ":a$="1"
 12990return
